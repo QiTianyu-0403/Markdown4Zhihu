@@ -22,7 +22,7 @@
 
 横向联邦学习的本质是**样本的联合**，适用于参与者间业态相同但触达客户不同，即特征重叠多，用户重叠少时的场景，比如不同地区的银行间，他们的业务相似（特征相似），但用户不同（样本不同）
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211129090254674.png" alt="image-20211129090254674" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211129090254674.png" alt="image-20211129090254674" style="zoom:40%;" />
 
 step1：参与方各自从服务器A下载最新模型；
 
@@ -40,7 +40,7 @@ step4：各参与方更新各自模型。
 
 纵向联邦学习的本质是**特征的联合**，适用于用户重叠多，特征重叠少的场景，比如同一地区的商超和银行，他们触达的用户都为该地区的居民（样本相同），但业务不同（特征不同）。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211129091459642.jpg" alt="image-20211129091459642" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211129091459642.jpg" alt="image-20211129091459642" style="zoom:40%;" />
 
 第一步：加密样本对齐。是在系统级做这件事，因此在企业感知层面不会暴露非交叉用户。
 
@@ -56,7 +56,7 @@ step4：C解密梯度和损失后回传给A和B，A、B去除掩码并更新模�
 
 **在整个过程中参与方都不知道另一方的数据和特征，且训练结束后参与方只得到自己侧的模型参数，即半模型。**故预测时需要双方协助完成：
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211129092222848.jpg" alt="image-20211129092222848" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211129092222848.jpg" alt="image-20211129092222848" style="zoom:40%;" />
 
 - 联邦迁移学习
 
@@ -103,7 +103,7 @@ step4：C解密梯度和损失后回传给A和B，A、B去除掩码并更新模�
 
 在计算下降最快的方向时时随机选一个数据进行计算，而不是扫描全部训练数据集，这样就加快了迭代速度。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211129164958246.png" alt="image-20211129164958246" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211129164958246.png" alt="image-20211129164958246" style="zoom:40%;" />
 
 
 
@@ -275,7 +275,7 @@ SGD可以很好地应用在联邦优化中，由于在每轮通讯中都会进�
 
 **主要区别：FedAvg相当于FedSGD在用户本地多次梯度更新。**
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211129195943177.png" alt="image-20211129195943177" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211129195943177.png" alt="image-20211129195943177" style="zoom:50%;" />
 
 计算量由三个关键参数控制：C，在每轮上执行计算的客户端的比例；E，每个客户端在每轮上对其本地数据集进行的训练通过数；B，客户端更新所使用的本地小批量大小。我们写入B=∞以指示将整个本地数据集作为单个小批处理，取B=∞和E=1，它正好对应于FedSGD。
 
@@ -291,13 +291,13 @@ SGD可以很好地应用在联邦优化中，由于在每轮通讯中都会进�
 
 对于一般的非凸目标函数，**参数空间中的平均模型可能会产生任意不好的模型结果**。 当我们平均两个**从不同初始条件训练**的MNIST数字识别模型时，我们恰好看到了这种不良结果。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211129194701527.png" alt="image-20211129194701527" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211129194701527.png" alt="image-20211129194701527" style="zoom:50%;" />
 
 通过平均两个模型 <img src="https://www.zhihu.com/equation?tex=w" alt="w" class="ee_img tr_noresize" eeimg="1"> 和 <img src="https://www.zhihu.com/equation?tex=w^\prime" alt="w^\prime" class="ee_img tr_noresize" eeimg="1"> 的参数而产生的模型的全MNIST训练集上的损失，结合的方式为： <img src="https://www.zhihu.com/equation?tex=\theta w+(1-\theta) w^{\prime}" alt="\theta w+(1-\theta) w^{\prime}" class="ee_img tr_noresize" eeimg="1"> 。对于左边的图， <img src="https://www.zhihu.com/equation?tex=w" alt="w" class="ee_img tr_noresize" eeimg="1"> 和 <img src="https://www.zhihu.com/equation?tex=w^\prime" alt="w^\prime" class="ee_img tr_noresize" eeimg="1"> 的使用不同的随机种子初始化；对于右边的图，使用了共享种子。在共享初始化的情况下，对模型求平均值会显著减少整个训练集的损失(比任何一个父模型的损失都好得多)。
 
 **<u>*FedAvg伪代码：*</u>**
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211129201045552.png" alt="image-20211129201045552" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211129201045552.png" alt="image-20211129201045552" style="zoom:40%;" />
 
 > 1. server要做的：
 >
@@ -353,7 +353,7 @@ SGD可以很好地应用在联邦优化中，由于在每轮通讯中都会进�
 
 - 分析参数 <img src="https://www.zhihu.com/equation?tex=C" alt="C" class="ee_img tr_noresize" eeimg="1"> 的影响，固定参数 <img src="https://www.zhihu.com/equation?tex=B" alt="B" class="ee_img tr_noresize" eeimg="1"> 和 <img src="https://www.zhihu.com/equation?tex=E" alt="E" class="ee_img tr_noresize" eeimg="1"> 。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211130143727881.png" alt="image-20211130143727881" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211130143727881.png" alt="image-20211130143727881" style="zoom:40%;" />
 
  <img src="https://www.zhihu.com/equation?tex=C=0.0" alt="C=0.0" class="ee_img tr_noresize" eeimg="1"> 对应每轮一个客户端，我们对MNIST数据使用100个客户端，因此这些行对应于1、10、20、50和100个客户端。每个表条目给出了2NN达到97%和CNN达到99%的测试集准确度所需的**通信回合数**，以及相对于 <img src="https://www.zhihu.com/equation?tex=C=0.0" alt="C=0.0" class="ee_img tr_noresize" eeimg="1"> 基线的加速。
 
@@ -361,9 +361,9 @@ SGD可以很好地应用在联邦优化中，由于在每轮通讯中都会进�
 
 - 固定参数 <img src="https://www.zhihu.com/equation?tex=C" alt="C" class="ee_img tr_noresize" eeimg="1"> 和 <img src="https://www.zhihu.com/equation?tex=\eta" alt="\eta" class="ee_img tr_noresize" eeimg="1"> ，分析参数 <img src="https://www.zhihu.com/equation?tex=E" alt="E" class="ee_img tr_noresize" eeimg="1"> 和 <img src="https://www.zhihu.com/equation?tex=B" alt="B" class="ee_img tr_noresize" eeimg="1"> 。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211130150651673.png" alt="image-20211130150651673" style="zoom:60%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211130150651673.png" alt="image-20211130150651673" style="zoom:60%;" />
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211130151117014.png" alt="image-20211130151117014" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211130151117014.png" alt="image-20211130151117014" style="zoom:50%;" />
 
 图中说明每轮添加更多本地SGD更新可以大大降低通信成本，表2量化了这些加速。其中每个客户端每回合的预期更新次数 <img src="https://www.zhihu.com/equation?tex=u" alt="u" class="ee_img tr_noresize" eeimg="1"> 可以表示为：
 
@@ -388,9 +388,9 @@ SGD可以很好地应用在联邦优化中，由于在每轮通讯中都会进�
 
 表3给出了Baseline SGD，FedSGD和FedAvg达到三项不同精度目标所需轮数，图4给出了FedAvg与FedSGD的学习率曲线。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211130155155959.png" alt="image-20211130155155959" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211130155155959.png" alt="image-20211130155155959" style="zoom:50%;" />
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记/image-20211130155210818.png" alt="image-20211130155210818" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/Communication-Efﬁcient Learning of Deep Networks from Decentralized Data学习笔记_for_zhihu/image-20211130155210818.png" alt="image-20211130155210818" style="zoom:40%;" />
 
 ---
 
