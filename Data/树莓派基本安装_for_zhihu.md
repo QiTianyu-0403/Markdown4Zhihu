@@ -28,11 +28,11 @@
 
 ## 1、外壳风扇
 
-![image-20211130162508452](https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装/image-20211130162508452.jpg)
+![image-20211130162508452](https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装_for_zhihu/image-20211130162508452.jpg)
 
 - 风扇安装
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装/image-20211130162556351.png" alt="image-20211130162556351" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装_for_zhihu/image-20211130162556351.png" alt="image-20211130162556351" style="zoom:50%;" />
 
 风扇螺丝不可拧的太紧，否则会导致风扇堵转损坏
 
@@ -134,13 +134,13 @@ sudo raspi-config
 
 - 按照Interface Options -> VNC -> Yes的顺序依次操作，最终会打开VNC。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装/image-20211201154528845.jpg" alt="image-20211201154528845" style="zoom:40%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装_for_zhihu/image-20211201154528845.jpg" alt="image-20211201154528845" style="zoom:40%;" />
 
 - 在win或mac上安装 [RealVNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)，输入正确地ip地址即可连接。
 
 > 在成功连接后有可能遇到无法正常显示的情况：
 >
-> <img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装/image-20211201154815123.png" alt="image-20211201154815123" style="zoom:40%;" />
+> <img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装_for_zhihu/image-20211201154815123.png" alt="image-20211201154815123" style="zoom:40%;" />
 >
 > 这是由于分辨率的原因，可以按照以下步骤配置：
 >
@@ -262,7 +262,7 @@ print(torch.__version__)
 
 然而实际的情况是，我需要用到的torch下的gloo并没有大功告成。
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装/image-20211217100526976.png" alt="image-20211217100526976" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装_for_zhihu/image-20211217100526976.png" alt="image-20211217100526976" style="zoom:50%;" />
 
 猜测原因是网上下载的wheel文件把distributed禁用了。如果你不需要用到这部分功能，至此完全是可以胜任了。或者不放心的话，可以移步第三章自行编译一遍。
 
@@ -472,7 +472,7 @@ pip3 install torchvision-0.7.0a0+78ed10c-cp37-cp37m-linux_armv7l.whl
 
 虽然我已经在上面尝试了太多种方法安装torch，但最后都是没能解决我的致命问题——实现gloo分布式。最后在一篇解答中找到了原因：
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装/image-20211217143138485.png" alt="image-20211217143138485" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装_for_zhihu/image-20211217143138485.png" alt="image-20211217143138485" style="zoom:50%;" />
 
 得嘞！前面功夫全白费了，看来人家32位系统就是不支持gloo，没办法，从头开始吧，首先是寻找64位系统。
 
@@ -500,7 +500,7 @@ pip3 install ****
 
 至此，我的分布式gloo环境总算是配好了：
 
-<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装/image-20211217144724340.jpg" alt="image-20211217144724340" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/QiTianyu-0403/Markdown4Zhihu/master/Data/树莓派基本安装_for_zhihu/image-20211217144724340.jpg" alt="image-20211217144724340" style="zoom:50%;" />
 
 呜呜呜呜呜太不易了！
 
