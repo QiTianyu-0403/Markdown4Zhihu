@@ -4,7 +4,7 @@
 
 ## 层次聚类Hierarchical Clustering
 
-<img src="http://bluewhale.cc/wp-content/uploads/2016/04/hierarchicalcluster.png" alt="hierarchicalcluster" style="zoom:60%;" />
+
 
 一开始，每个样本都属于一个簇，通过计算欧氏距离、曼哈顿距离等方式，将距离最相近的作为一个簇。
 
@@ -53,7 +53,7 @@ $$
 
 4、Concept shift (same label, different features)：$\mathcal{P}_i(x|y)$不同。
 
-<img src="https://img-blog.csdnimg.cn/bba369fb46ee443c8dff5bebe3ba12cc.png" alt="在这里插入图片描述" style="zoom:50%;" />
+
 
 所以学习的过程中最好的方式是具有相同类似的数据分布的客户组的多个模型首先进行聚合。
 
